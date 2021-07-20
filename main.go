@@ -1,8 +1,3 @@
-// SPDX-FileCopyrightText: 2020 Kent Gibson <warthog618@gmail.com>
-//
-// SPDX-License-Identifier: MIT
-
-// A simple example that toggles an output pin.
 package main
 
 import (
@@ -14,9 +9,6 @@ import (
 	"syscall"
 )
 
-// This example drives GPIO 4, which is pin J8-7 on a Raspberry Pi.
-// The pin is toggled high and low at 1Hz with a 50% duty cycle.
-// Do not run this on a device which has this pin externally driven.
 func main() {
 	c, err := gpiod.NewChip("gpiochip0")
 	if err != nil {
